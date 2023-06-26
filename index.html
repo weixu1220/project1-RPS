@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+            <!-- make title page with button to start -->
+    <!-- make a background changer -->
+    <div id = "start">
+        <h1><span id="blue">Rock .</span>  <span id="red">Paper .</span>  <span id="green">Scissors .</span></h1>
+        <h2 id="enter">START</h2>
+    </div>
+    <div class = "container">
+        <header>
+            <div class = "button-container">
+                <!-- 1 game, 2 out of 3, 3 out of 5 buttons-->
+                <div><button id="mode">Game Mode</button></div>
+                <div id="subMode">
+                    <button id ="one">Knock Out</button>
+                    <button id ="three">Best of Three</button>
+                    <button id = five>Best of Five</button>
+                </div>
+            </div>        
+        </header>
+        <main>
+            <div class="player">
+                <div class = "board">
+                    <!-- player1 score board -->
+                    <h1 id="p1name" class="name">Player1's name</h1>
+                    <h2 id="p1score" class="score">Player1's score</h2>
+                </div>
+                <div id = "p1" class="play">
+                    <div class="control">
+                        <!-- player 1 buttons -->
+                        <div class="icon">
+                            <!-- rock -->
+                            <img id = "p1R" class = "icon-img" src = "rock.png" alt = "rock">
+                        </div>
+                        <div class="icon">
+                            <!-- paper -->
+                            <img id = "p1P" class = "icon-img" src = "paper.png" alt = "paper">
+                        </div>
+                        <div class="icon">
+                            <!-- scissors -->
+                            <img id = "p1S" Class = "icon-img" src = "scissors.png" alt = "paper">
+                        </div>
+                    </div>
+                    <div class="choice">current choice</div>
+                </div>
+                
+            </div>
+            <div class = "display">
+                <!-- instruction display -->
+                <p id="gameText">text</p>
+            </div>
+            <div id = "p2" class = "player">
+                <div class = "board">
+                    <!-- player2 score board -->
+                    <h1 id="p2name" class="name">Player2's name</h1>
+                    <h2 id="p2score" class="score">Player2's score</h2>
+                </div>
+                <div class="play">
+                    <div class="choice">current choice</div>
+                    <div class="control">
+                        <!-- player 2 buttons -->
+                        <div class="icon">
+                            <!-- rock -->
+                            <img id = "p2R" class="icon-img" src="rock.png" alt="rock">
+                        </div>
+                        <div class="icon">
+                            <!-- paper -->
+                            <img id = "p2P" class="icon-img" src="paper.png" alt="paper">
+                        </div>
+                        <div class="icon">
+                            <!-- scissors -->
+                            <img id = "p2S" class="icon-img" src="scissors.png" alt="paper">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <!-- background image mini display -->
+            </div>
+            <!-- control buttons -->
+            <div class = "button-container">
+                <!-- switch player -->
+                <button id="endRound">End my Round</button>
+                <!-- clear score board -->
+                <button id="reset">Reset</button>
+                <!-- surrender -->
+                <button id="surrender">Surrender</button>
+                <!-- switch background -->
+                <button id="switchBG">Switch Background</button>
+                
+            </div>
+        </footer>
+    </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
