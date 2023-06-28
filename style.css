@@ -1,5 +1,6 @@
 *{
-    border:2px solid black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border: 2px solid black; */
 }
 .wrap{
     
@@ -9,22 +10,22 @@
     width: 1200px;
     height:1000px;
 }
-.container{
-    z-index: 0;
+#container{
+    position:absolute;
+    z-index: 1;
     display: flex;
-    position: absolute; 
-    flex-direction: column;
+    flex-direction:column;
     width: 1200px;
     height:1000px;
     margin-left: auto;
     margin-right: auto;
-    background-image:url("bg1.jpg");
+    background-image:url("/images/bg1.jpg");
     background-size: cover;
 }
 #start{
     position:absolute;
     background-color: white;
-    z-index: 1;
+    z-index: 2;
     width: 1200px;
     height: 1000px;
     display: flex;
@@ -44,8 +45,11 @@
 #green{
     color:rgb(178, 233, 95);
 }
-#start p{
-    font-size: 20px;
+label{
+    font-size: 35px;
+}
+#name1 {
+    font-size: 35px;
 }
 #enter{
     width:150px;
@@ -68,16 +72,14 @@
         animation: rainbow 1s linear infinite;
 }
 @keyframes rainbow {
-    to {
-      background-position: 200% center;
+to {
+    background-position: 100% center;
     }
-  }
-header{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
 }
 .button-container{
     width: 1100px;
@@ -87,51 +89,23 @@ header{
     align-self: center;
     padding: 1rem;;
 }
-#mode{
-    background-color:rgb(253, 2, 157);
-    font-size: 30px;
-}
-#mode:hover{
-    background-color: rgb(242, 73, 178);
-    transition: 1s;
-    box-shadow: 0px 0px 5px 5px rgb(0,0,0);
-}
-#subMode{
-    visibility: hidden;
-    width: 900px;
-    display: flex;
-    justify-content: space-around;
-}
-
-#scoreboard{
-    display: flex;
-    justify-content: space-between;
-    width:100%;
-    
-}
 .board{
-    background-image: url(board.jpg);
+    border-radius: 2em;
+    background-color:rgb(242, 73, 178, 50%);
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    height: 200px;
     text-align: center;
 }
-.name .score{
-    padding:1rem;
-    margin:auto auto auto auto;
+.name{
+    font-size: 40px;
 }
-
-main{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
+.score{
+    font-size: 40px;
 }
 .player{
     display:flex;
     flex-direction: column;
     width:330px;
-    height:760px;
+    height:890px;
 }
 .play{
     display: flex;
@@ -146,6 +120,12 @@ main{
     height: 760px;
     text-align: center;
     font-size: 40px;
+}
+#round{
+    color:white;
+}
+#gameText{
+    color:white;
 }
 .control{
     padding: 0rem;
@@ -165,6 +145,11 @@ main{
     border-radius: 15px;
     width:100px;
 }
+.icon-com{
+    background-color: black;
+    border-radius: 15px;
+    width:100px;
+}
 .icon-img:hover{
     animation: shake 0.5s;
     animation-iteration-count: infinite;
@@ -175,19 +160,18 @@ main{
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
     20% { transform: translate(-3px, 0px) rotate(1deg); }
     30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    40% { transform: translate(1px, -1px) rotate(-1deg); }
+    50% { transform: translate(-1px, 2px) rotate(0deg); }
+    60% { transform: translate(-3px, 1px) rotate(1deg); }
+    70% { transform: translate(3px, 1px) rotate(0deg); }
+    80% { transform: translate(-1px, -1px) rotate(-1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    100% { transform: translate(1px, -2px) rotate(1deg); }
 }
 footer{
     display:flex;
     flex-direction: column;
 }
-
 button{
     width:220px;
     padding:10px;
@@ -200,7 +184,4 @@ button:hover{
     background-color: rgb(245, 144, 206);
     transition: 1s;
     box-shadow: 0px 0px 5px 5px rgb(0,0,0);
-
 }
-
-

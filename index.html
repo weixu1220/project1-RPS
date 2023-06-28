@@ -8,76 +8,69 @@
 </head>
 <body>
     <div class="wrap">
-            <!-- make title page with button to start -->
-    <!-- make a background changer -->
+        <!-- make title page with button to start -->
     <div id = "start">
         <h1><span id="blue">Rock .</span>  <span id="red">Paper .</span>  <span id="green">Scissors .</span></h1>
+        <form>
+            <label for="name1">Player's name:</label>
+            <input type="text" id="name1" name="name1" placeholder="Player's name"><br><br>
+          </form>
         <h2 id="enter">START</h2>
     </div>
-    <div class = "container">
-        <header>
-            <div class = "button-container">
-                <!-- 1 game, 2 out of 3, 3 out of 5 buttons-->
-                <div><button id="mode">Game Mode</button></div>
-                <div id="subMode">
-                    <button id ="one">Knock Out</button>
-                    <button id ="three">Best of Three</button>
-                    <button id = five>Best of Five</button>
-                </div>
-            </div>        
-        </header>
+    <div id = "container">
         <main>
             <div class="player">
                 <div class = "board">
                     <!-- player1 score board -->
                     <h1 id="p1name" class="name">Player1's name</h1>
-                    <h2 id="p1score" class="score">Player1's score</h2>
+                    <h2 id="p1score" class="score">0</h2>
                 </div>
-                <div id = "p1" class="play">
-                    <div class="control">
+                <div class="play">
+                    <div id = "p1" class="control">
                         <!-- player 1 buttons -->
                         <div class="icon">
                             <!-- rock -->
-                            <img id = "p1R" class = "icon-img" src = "rock.png" alt = "rock">
+                            <img id = "p1R" class = "icon-img" src = "/images/rock.png" alt = "rock">
                         </div>
                         <div class="icon">
                             <!-- paper -->
-                            <img id = "p1P" class = "icon-img" src = "paper.png" alt = "paper">
+                            <img id = "p1P" class = "icon-img" src = "/images/paper.png" alt = "paper">
                         </div>
                         <div class="icon">
                             <!-- scissors -->
-                            <img id = "p1S" Class = "icon-img" src = "scissors.png" alt = "paper">
+                            <img id = "p1S" Class = "icon-img" src = "/images/scissors.png" alt = "paper">
                         </div>
                     </div>
-                    <div class="choice">current choice</div>
+                    <div class="choice"></div>
                 </div>
                 
             </div>
             <div class = "display">
                 <!-- instruction display -->
-                <p id="gameText">text</p>
+                <p id = "round"></p>
+                <p id="gameText"></p>
             </div>
-            <div id = "p2" class = "player">
+            <div  class = "player">
                 <div class = "board">
                     <!-- player2 score board -->
-                    <h1 id="p2name" class="name">Player2's name</h1>
-                    <h2 id="p2score" class="score">Player2's score</h2>
+                    <h1 id="p2name" class="name">Computer</h1>
+                    <h2 id="p2score" class="score">0</h2>
                 </div>
                 <div class="play">
-                    <div class="choice">current choice</div>
-                    <div class="control">
+                    <div class="choice"></div>
+                    <div id = "p2" class="control">
                         <!-- player 2 buttons -->
                         <div class="icon">
                             <!-- rock -->
-                            <img id = "p2R" class="icon-img" src="rock.png" alt="rock">
+                            <img id = "p2R" class="icon-com" src="/images/rock.png" alt="rock">
                         </div>
                         <div class="icon">
                             <!-- paper -->
-                            <img id = "p2P" class="icon-img" src="paper.png" alt="paper">
+                            <img id = "p2P" class="icon-com" src="/images/paper.png" alt="paper">
                         </div>
                         <div class="icon">
                             <!-- scissors -->
-                            <img id = "p2S" class="icon-img" src="scissors.png" alt="paper">
+                            <img id = "p2S" class="icon-com" src="/images/scissors.png" alt="paper">
                         </div>
                     </div>
                 </div>
@@ -89,12 +82,8 @@
             </div>
             <!-- control buttons -->
             <div class = "button-container">
-                <!-- switch player -->
-                <button id="endRound">End my Round</button>
                 <!-- clear score board -->
                 <button id="reset">Reset</button>
-                <!-- surrender -->
-                <button id="surrender">Surrender</button>
                 <!-- switch background -->
                 <button id="switchBG">Switch Background</button>
                 
@@ -102,6 +91,6 @@
         </footer>
     </div>
     </div>
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
