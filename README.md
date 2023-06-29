@@ -1,5 +1,6 @@
 # Project1 Rock Paper Scissors
 ## Github link to my game
+https://weixu1220.github.io/project1-RPS/
 ## Features
 ### Player input
     Player can input their name 
