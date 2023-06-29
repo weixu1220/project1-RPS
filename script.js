@@ -9,7 +9,7 @@ const computerScore = document.getElementById("p2score");
 const gameText = document.getElementById("gameText");
 const round = document.getElementById("round");
 const switchBG = document.getElementById("switchBG")
-const bg = ["/images/bg1.jpg","/images/bg2.jpg","/images/bg3.jpg","/images/bg4.jpg"];
+const bg = ["./images/bg1.jpg","./images/bg2.jpg","./images/bg3.jpg","./images/bg4.jpg"];
 let playerOutput;
 let comOutput;
 let name1;
