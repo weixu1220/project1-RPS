@@ -168,6 +168,104 @@ main{
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(1deg); }
 }
+
+#p1R.animate {
+    position: relative;
+    animation: moveImage1 2s ease-in-out 1;
+}
+
+#p1P.animate {
+    position: relative;
+    animation: moveImage2 2s ease-in-out 1;
+}
+
+#p1S.animate {
+    position: relative;
+
+    animation: moveImage3 2s ease-in-out 1;
+}
+
+#p2R.animate {
+    position: relative;
+    animation: moveImage4 2s ease-in-out 1;
+}
+
+#p2P.animate {
+    position: relative;
+    animation: moveImage5 2s ease-in-out 1;
+}
+
+#p2S.animate {
+    position: relative;
+    animation: moveImage6 2s ease-in-out 1;
+}
+@keyframes moveImage1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(450px, 220px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes moveImage2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translateX(450px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes moveImage3 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(450px, -220px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveImage4 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-450px, 220px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes moveImage5 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translateX(-450px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes moveImage6 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-450px, -220px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
 footer{
     display:flex;
     flex-direction: column;
