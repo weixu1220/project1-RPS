@@ -9,8 +9,8 @@ const computerScore = document.getElementById("p2score");
 const gameText = document.getElementById("gameText");
 const round = document.getElementById("round");
 const switchBG = document.getElementById("switchBG")
-const bg = ["https://github.com/weixu1220/project1-RPS/blob/main/images/bg1.jpg",
-"https://github.com/weixu1220/project1-RPS/blob/main/images/bg2.jpg","https://github.com/weixu1220/project1-RPS/blob/main/images/bg3.jpg","https://github.com/weixu1220/project1-RPS/blob/main/images/bg4.jpg"];
+const bg = ["./images/bg1.jpg",
+"./images/bg2.jpg","./images/bg3.jpg","./images/bg4.jpg"];
 let playerIcon = document.querySelectorAll('.icon-img');
 let comIcon = document.querySelectorAll('.icon-com');
 let playerOutput;
