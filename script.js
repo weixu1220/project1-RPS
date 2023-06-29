@@ -52,57 +52,71 @@ reset.onclick = function () {
         console.log("switchBG is pushed ")  
         };
 const computerTurn = () => {
+    remove2()
     let outCome = Math.floor(Math.random() * 3);
     if(outCome === 0){
             comOutput = "Rock";
+            console.log(p2R.classList.contains("animate"))
             p2R.classList.add('animate'); 
+            console.log(p2R.classList.contains("animate"))
     }else if(outCome === 1){
             comOutput = "Paper";
+            console.log(p2P.classList.contains("animate"))
             p2P.classList.add('animate'); 
+            console.log(p2R.classList.contains("animate"))
     }else{
             comOutput = "Scissors";
+            console.log(p2S.classList.contains("animate"))
             p2S.classList.add('animate'); 
+            console.log(p2S.classList.contains("animate"))
     }
 }
 const winner = () =>{
     computerTurn();
-    if (playerOutput === comOutput){
-        round.innerHTML += `Computer played ${comOutput}!`
-        gameText.innerHTML = "It's a tie!";
-    }else if ((playerOutput === "Rock" && comOutput === "Scissors")|| (playerOutput === "Paper" && comOutput === "Rock")|| (playerOutput === "Scissors" && comOutput === "Paper")){
-        round.innerHTML += `Computer played ${comOutput}!`
-        gameText.innerHTML = `${name1} won this round!`;
-        playerScore.innerHTML = Number(playerScore.innerHTML)+1;
-    }else{
-        round.innerHTML += `Computer played ${comOutput}!`
-        gameText.innerHTML = `Computer won this round!`;
-        computerScore.innerHTML = Number(computerScore.innerHTML)+1;
-    }
+    round.style.visibility= "hidden"
+    gameText.style.visibility= "hidden";
+    setTimeout(()=>{
+        if (playerOutput === comOutput){
+            round.innerHTML += `Computer played ${comOutput}!`
+            gameText.innerHTML = "It's a tie!";
+        }else if ((playerOutput === "Rock" && comOutput === "Scissors")|| (playerOutput === "Paper" && comOutput === "Rock")|| (playerOutput === "Scissors" && comOutput === "Paper")){
+            round.innerHTML += `Computer played ${comOutput}!`
+            gameText.innerHTML = `${name1} won this round!`;
+            playerScore.innerHTML = Number(playerScore.innerHTML)+1;
+        }else{
+            round.innerHTML += `Computer played ${comOutput}!`
+            gameText.innerHTML = `Computer won this round!`;
+            computerScore.innerHTML = Number(computerScore.innerHTML)+1;
+        }
+        round.style.visibility= "visible"
+        gameText.style.visibility= "visible";
+        remove1();
+        remove2();
+    },2000)
+    
 }
 
 //remove class
 const remove1 = () => {
     for (let i = 0; i < playerIcon.length; i++) {
         playerIcon[i].classList.remove('animate');
+        console.log("player",playerIcon[i].classList.contains('animate'))
         }
 }
 const remove2 = () => {
     for (let i = 0; i < comIcon.length; i++) {
         comIcon[i].classList.remove('animate');
+        console.log("com",comIcon[i].classList.contains('animate'))
         }
 }
 // icons actions
 p1R.onclick = function() {
-    remove1()
-    remove2()
     playerOutput = "Rock";
     p1R.classList.add('animate');
     round.innerHTML = `${name1} played Rock! `
     winner();
 };   
 p1P.onclick = function() {
-    remove1()
-    remove2()
     p1P.classList.add('animate');  
     playerOutput = "Paper";
     round.innerHTML = `${name1} played Paper! `;
@@ -110,8 +124,6 @@ p1P.onclick = function() {
 
 };  
 p1S.onclick = function() {
-    remove1()
-    remove2()
     p1S.classList.add('animate');
     playerOutput = "Scissors";
     round.innerHTML = `${name1} played Scissors! `;
