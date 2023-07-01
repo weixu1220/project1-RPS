@@ -7,58 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrap">
         <!-- make title page with button to start -->
     <div id = "start">
-        <h1><span id="blue">Rock .</span>  <span id="red">Paper .</span>  <span id="green">Scissors .</span></h1>
+        <h1><span id="blue">Rock.</span>  <span id="red">Paper.</span>  <span id="green">Scissors.</span></h1>
         <form>
             <label for="name1">Player's name:</label>
             <input type="text" id="name1" name="name1" placeholder="Player's name"><br><br>
-          </form>
+        </form>
         <h2 id="enter">START</h2>
     </div>
     <div id = "container">
         <main>
-            <div class="player">
-                <div class = "board">
-                    <!-- player1 score board -->
-                    <h1 id="p1name" class="name">Player1's name</h1>
-                    <h2 id="p1score" class="score">0</h2>
-                </div>
-                <div class="play">
-                    <div id = "p1" class="control">
-                        <!-- player 1 buttons -->
-                        <div class="icon">
-                            <!-- rock -->
-                            <img id = "p1R" class = "icon-img" src = "images/rock.png" alt = "rock">
-                        </div>
-                        <div class="icon">
-                            <!-- paper -->
-                            <img id = "p1P" class = "icon-img" src = "images/paper.png" alt = "paper">
-                        </div>
-                        <div class="icon">
-                            <!-- scissors -->
-                            <img id = "p1S" Class = "icon-img" src = "images/scissors.png" alt = "paper">
-                        </div>
-                    </div>
-                    <div class="choice"></div>
-                </div>
-                
-            </div>
-            <div class = "display">
-                <!-- instruction display -->
-                <p id = "round"></p>
-                <p id="gameText"></p>
-            </div>
-            <div  class = "player">
+            
+            <div id = "p2" class = "player">
                 <div class = "board">
                     <!-- player2 score board -->
-                    <h1 id="p2name" class="name">Computer</h1>
-                    <h2 id="p2score" class="score">0</h2>
+                    <h3 id="p2name" class="name">Computer</h3>
+                    <h3 id="p2score" class="score">0</h3>
                 </div>
                 <div class="play">
-                    <div class="choice"></div>
-                    <div id = "p2" class="control">
+                    <div  class="control">
                         <!-- player 2 buttons -->
                         <div class="icon">
                             <!-- rock -->
@@ -75,11 +43,37 @@
                     </div>
                 </div>
             </div>
+            <div class = "display">
+                <!-- instruction display -->
+                <h2 id = "round"></h2>
+                <h2 id="gameText"></h2>
+            </div>
+            <div id = "p1" class="player">
+                <div class = "board">
+                    <!-- player1 score board -->
+                    <h2 id="p1name" class="name">Player1's name</h2>
+                    <h2 id="p1score" class="score">0</h2>
+                </div>
+                <div class="play">
+                    <div  class="control">
+                        <!-- player 1 buttons -->
+                        <div class="icon">
+                            <!-- rock -->
+                            <img id = "p1R" class = "icon-img" src = "images/rock.png" alt = "rock">
+                        </div>
+                        <div class="icon">
+                            <!-- paper -->
+                            <img id = "p1P" class = "icon-img" src = "images/paper.png" alt = "paper">
+                        </div>
+                        <div class="icon">
+                            <!-- scissors -->
+                            <img id = "p1S" Class = "icon-img" src = "images/scissors.png" alt = "paper">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer>
-            <div>
-                <!-- background image mini display -->
-            </div>
             <!-- control buttons -->
             <div class = "button-container">
                 <!-- clear score board -->
@@ -89,7 +83,6 @@
                 
             </div>
         </footer>
-    </div>
     </div>
     <script src="script.js"></script>
 </body>

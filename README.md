@@ -1,6 +1,13 @@
 # Project1 Rock Paper Scissors
-## Github link to my game
-https://weixu1220.github.io/project1-RPS/
+This is a classic player vs. computer rock paper scissors game.  
+Rock beats scissors, scissors beat paper, and paper beats rock.  
+You can use rock, paper, scissors to settle minor decisions or simply play to pass the time. EnjoY!
+## This game is playable on [GitHub Pages](https://weixu1220.github.io/project1-RPS/)
+## This game is responsive.
+## Screen shots
+![Front Page](https://weixu1220.github.io/project1-RPS/images/Screenshot2.png)
+![Back Page](https://weixu1220.github.io/project1-RPS/images/Screenshot1.png)
+![Responsive display](https://weixu1220.github.io/project1-RPS/images/Screenshot3.png)
 ## Features
 ### Player input
     The players can input their names.
