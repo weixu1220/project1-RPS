@@ -1,4 +1,7 @@
-
+const click1 = new Audio("./sounds/click.mp3");
+const shake = new Audio("./sounds/shake.mp3");
+const bgm = new Audio("./sounds/deep_in_thought.mp3")
+bgm.loop = true;
 const cover = document.getElementById("start");
 const enter = document.getElementById("enter");
 const reset = document.getElementById("reset");
@@ -23,6 +26,7 @@ const p2R = document.getElementById('p2R');
 const p2P = document.getElementById('p2P');
 const p2S = document.getElementById('p2S');
 enter.addEventListener("click",function(){
+    click1.play()
     cover.style.zIndex = 0;
     name1 = nameInput.value.toUpperCase();
     while (name1 === "" ||name1 ==="Player1's name"){
@@ -34,6 +38,7 @@ enter.addEventListener("click",function(){
 
 //reset
 reset.onclick = function () {
+    click1.play();
     playerName.innerHTML = "Player1's name";
     name1 = prompt("Player 1, what is your name?").toUpperCase();
     while (name1 === "" ||name1 ==="Player1's name"){
@@ -48,6 +53,7 @@ reset.onclick = function () {
     }; 
 //switch background
     switchBG.onclick = function() {
+        click1.play()
         let index = Math.floor(Math.random()* bg.length);
         document.getElementById("container").style.backgroundImage = `url(${bg[index]})`;
         console.log("switchBG is pushed ")  
@@ -112,12 +118,14 @@ const remove2 = () => {
 }
 // icons actions
 p1R.onclick = function() {
+    shake.play();
     playerOutput = "Rock";
     p1R.classList.add('animate');
     round.innerHTML = `${name1} played Rock! `
     winner();
 };   
 p1P.onclick = function() {
+    shake.play();
     p1P.classList.add('animate');  
     playerOutput = "Paper";
     round.innerHTML = `${name1} played Paper! `;
@@ -125,6 +133,7 @@ p1P.onclick = function() {
 
 };  
 p1S.onclick = function() {
+    shake.play();
     p1S.classList.add('animate');
     playerOutput = "Scissors";
     round.innerHTML = `${name1} played Scissors! `;

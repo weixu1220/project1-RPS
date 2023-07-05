@@ -23,3 +23,8 @@ You can use rock, paper, scissors to settle minor decisions or simply play to pa
     Icon for player's choice and the computer's choice will collide in the middle of the game board and return to original position.
 ### Outcome announcement
     The middle display will show the player's choice and the computer's choice as well as the outcome of each round, with a slight delay, and appear after the animation is over.
+### Credits
+[Background image designed by Alekksall / Freepik](http://www.freepik.com)
+[Background image designed by macrovector / Freepik](http://www.freepik.com)
+[Background image designed by macrovector / Freepik](http://www.freepik.com)
+[Sound effects obtained from Zapsplat](https://www.zapsplat.com)
